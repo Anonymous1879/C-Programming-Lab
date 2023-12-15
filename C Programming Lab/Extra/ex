@@ -1,0 +1,28 @@
+Write a C program to read two strings in main and compare them using userdefined
+function.rDisplay appropriate message from main.
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+int compare(char [],char []);
+
+int main()
+{
+	int result;
+	char str[20],str2[20];
+	gets(str);
+	gets(str2);
+	result=compare(str,str2)
+	if (result<0)
+		printf("%s<%s",str,str2);
+	if (result>0)
+		printf("%s>%s",str,str2);
+	if (result==0)
+		printf("Same");
+}
+
+int compare(char x[20],char y[20])
+{
+	return strcmp(x,y);
+}
